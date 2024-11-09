@@ -18,7 +18,7 @@ public class RestUtils {
                 .extract().response();
     }
 
-    public static Response performPost(String baseURI, Map<String,Object> reqPayload, Map<String,String> headers) {
+    public static Response performPost(String baseURI,Map<String,Object> reqPayload, Map<String,String> headers) {
 
         return RestAssured.given().log().all()
                 .baseUri(baseURI)
