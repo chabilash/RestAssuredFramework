@@ -14,7 +14,7 @@ public class AirlineTests {
 
     @Test
     public void createAirline() throws IOException {
-
+        String env = System.getProperty("env") == null ? "qa" : System.getProperty("env");
         Map<String, Object> data = JsonUtils.getJsonDataAsMap("airlines/qa/airlinesApiData.json");
 
         String baseURI = (String) data.get("createAirlineEndPoint");
@@ -23,7 +23,7 @@ public class AirlineTests {
 //                "https://upload.wikimedia.org/wikipedia/en/thumb/9/9b/ABC_Airways_Logo.svg/india.png",
 //                "From India","Mumbai, India","www.abcairways.com","1980");
 
-        Map<String, Object> reqPayload = Payloads.getCreateAirlinePayloadFromMap("88a46ba0-7030-40a9-b0a0-3edd6aa13509","ABC Ailines","India",
+        Map<String, Object> reqPayload = Payloads.getCreateAirlinePayloadFromMap("88a46ba0-7030-40a9-b0a0-3edd6aa13547","ABC Ailines","India",
                 "https://upload.wikimedia.org/wikipedia/en/thumb/9/9b/ABC_Airways_Logo.svg/india.png",
                 "From India","Mumbai, India","www.abcairways.com","1980");
 
